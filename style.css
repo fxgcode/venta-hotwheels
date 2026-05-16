@@ -420,6 +420,13 @@ main {
   line-height: 1.4;
 }
 
+.desc-num {
+  font-size: 0.78rem;
+  color: rgba(230, 180, 17, 0.699);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
 .precio {
   font-size: 1.2rem;
   font-weight: 700;
