@@ -1,223 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hot Wheels</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Wheels</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="header-logo">
+          <img src="img/Hot_Wheels_2014.svg" alt="Logo Hot Wheels" />
+          <p>Colección y venta de Hot Wheels - Bucaramanga CO</p>
+        </div>
+        <div class="header-derecha">
+          <nav class="header-nav">
+            <a href="/index.html">Inicio</a>
+            <a href="/productos.html">Colección</a>
+            <a href="/productos.html">Ventas</a>
+          </nav>
 
-  <header>
-    <div class="header-content">
-      <div class="header-logo">
-        <img src="img/Hot_Wheels_2014.svg" alt="Logo Hot Wheels">
-        <p>Colección y venta de Hot Wheels - Bucaramanga CO</p>
-      </div>
-      <div class="header-derecha">
-        <nav class="header-nav">
-          <a href="/index.html">Inicio</a>
-          <a href="/productos.html">Colección</a>
-          <a href="/productos.html">Ventas</a>
-        </nav>
+          <!-- CART WIDGET -->
+          <div class="cart-widget">
+            <button
+              class="cart-widget-btn"
+              onclick="toggleCarritoWidget()"
+              aria-label="Ver carrito"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path
+                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                />
+              </svg>
+              <span class="cart-widget-badge" id="cart-badge">0</span>
+            </button>
 
-        <!-- CART WIDGET -->
-        <div class="cart-widget">
-          <button class="cart-widget-btn" onclick="toggleCarritoWidget()" aria-label="Ver carrito">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-            </svg>
-            <span class="cart-widget-badge" id="cart-badge">0</span>
-          </button>
-
-          <!-- DROPDOWN -->
-          <div class="cart-dropdown" id="cart-dropdown">
-            <div class="cart-drop-header">
-              <h3>Tu pedido</h3>
-              <button class="cart-drop-close" onclick="toggleCarritoWidget()">✕</button>
-            </div>
-            <ul class="cart-drop-lista" id="lista-widget"></ul>
-            <div class="cart-drop-vacio" id="cart-drop-vacio">
-              <p>Carrito vacío</p>
-            </div>
-            <div class="cart-drop-footer">
-              <p id="total-widget">Total: $0</p>
-              <button class="btn-whatsapp" onclick="enviarPedido()">
-                <span>💬</span> Pedir por WhatsApp
-              </button>
+            <!-- DROPDOWN -->
+            <div class="cart-dropdown" id="cart-dropdown">
+              <div class="cart-drop-header">
+                <h3>Tu pedido</h3>
+                <button class="cart-drop-close" onclick="toggleCarritoWidget()">
+                  ✕
+                </button>
+              </div>
+              <ul class="cart-drop-lista" id="lista-widget"></ul>
+              <div class="cart-drop-vacio" id="cart-drop-vacio">
+                <p>Carrito vacío</p>
+              </div>
+              <div class="cart-drop-footer">
+                <p id="total-widget">Total: $0</p>
+                <button class="btn-whatsapp" onclick="enviarPedido()">
+                  <span>💬</span> Pedir por WhatsApp
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- HERO SLIDER -->
-  <section class="hero-slider">
-    <div class="slides">
-
-      <div class="slide active" style="background: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/hot-wheels-background-1680-x-1050-fjcp171rm0mzeht1.jpg') center/cover no-repeat;">
-        <div class="slide-content">
-          <h2>Tu colección favorita de Hot Wheels</h2>
-          <p>Descubre modelos exclusivos, deportivos y edición colección. Publicaciones nuevas, fotos reales y contacto directo por WhatsApp o Instagram.</p>
+    <!-- HERO SLIDER -->
+    <section class="hero-slider">
+      <div class="slides">
+        <div
+          class="slide active"
+          style="
+            background:
+              linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url(&quot;img/hot-wheels-background-1680-x-1050-fjcp171rm0mzeht1.jpg&quot;)
+                center/cover no-repeat;
+          "
+        >
+          <div class="slide-content">
+            <h2>Tu colección favorita de Hot Wheels</h2>
+            <p>
+              Descubre modelos exclusivos, deportivos y edición colección.
+              Publicaciones nuevas, fotos reales y contacto directo por WhatsApp
+              o Instagram.
+            </p>
+          </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <main>
-
-    <section class="seccion-titulo">
-      <h2>Modelos destacados</h2>
-      <p>Modelos disponibles y colección personal.</p>
     </section>
 
-    <div class="menu">
+    <main>
+      <section class="seccion-titulo">
+        <h2>Modelos destacados</h2>
+        <p>Modelos disponibles y colección personal.</p>
+      </section>
 
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0038.jpg" alt="Lamborgnini Huuracán Sterrato">
-        <h3>Lamborgnini Huuracán Sterrato</h3>
-        <p class="desc">Safari Mode (1/5)</p>
-        <p class="desc-num">41/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('Lamborgnini Huuracán Sterrato 🚗', 20000)">+ Agregar</button>
+      <div class="menu">
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0038.jpg"
+            alt="Lamborgnini Huuracán Sterrato"
+          />
+          <h3>Lamborgnini Huuracán Sterrato</h3>
+          <p class="desc">Safari Mode (1/5)</p>
+          <p class="desc-num">41/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('Lamborgnini Huuracán Sterrato 🚗', 20000)">
+            + Agregar
+          </button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0046.jpg"
+            alt="CUPRA e-RACER / VOITURE DE COURSE"
+          />
+          <h3>CUPRA e-RACER / VOITURE DE COURSE</h3>
+          <p class="desc">Nightspeed (5/10)</p>
+          <p class="desc-num">37/250</p>
+          <p class="precio">$20.000</p>
+          <button
+            onclick="agregar('CUPRA e-RACER / VOITURE DE COURSE 🚗', 20000)"
+          >
+            + Agregar
+          </button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0047.jpg"
+            alt="MOD MILL"
+          />
+          <h3>MOD MILL</h3>
+          <p class="desc">MUSCLE MANIA FOLIE MUSCLEE (7/10)</p>
+          <p class="desc-num">218/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('MOD MILL 🚗', 20000)">+ Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0048.jpg"
+            alt="PORSCHE 911 TURBO CABRIOLET"
+          />
+          <h3>PORSCHE 911 TURBO CABRIOLET</h3>
+          <p class="desc">DROP TOPS (3/5)</p>
+          <p class="desc-num">52/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('PORSCHE 911 TURBO CABRIOLET 🚗', 20000)">
+            + Agregar
+          </button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0049.jpg"
+            alt="24/SEVEN"
+          />
+          <h3>24/SEVEN</h3>
+          <p class="desc">NIGHTSPEED (6/10)</p>
+          <p class="desc-num">38/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('24/SEVEN 🚗', 20000)">+ Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0050.jpg"
+            alt="FERRARI 365 GTB4 COMPETIZIONE"
+          />
+          <h3>FERRARI 365 GTB4 COMPETIZIONE</h3>
+          <p class="desc">FERRARI (2/5)</p>
+          <p class="desc-num">62/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('FERRARI 365 GTB4 COMPETIZIONE 🚗', 20000)">
+            + Agregar
+          </button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0051.jpg"
+            alt="FERRARI F40 COMPETIZIONE"
+          />
+          <h3>FERRARI F40 COMPETIZIONE</h3>
+          <p class="desc">FERRARI (3/5)</p>
+          <p class="desc-num">63/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('FERRARI F40 COMPETIZIONE 🚗', 20000)">
+            + Agregar
+          </button>
+        </div>
+
+        <div class="producto">
+          <img
+            class="img-producto"
+            src="photo/IMG-20260331-WA0052.jpg"
+            alt="'70 DODGE HEMI CHALLENGER"
+          />
+          <h3>'70 DODGE HEMI CHALLENGER</h3>
+          <p class="desc">NIGHTSPEED (4/10)</p>
+          <p class="desc-num">36/250</p>
+          <p class="precio">$20.000</p>
+          <button onclick="agregar('\'70 DODGE HEMI CHALLENGER 🚗', 20000)">
+            + Agregar
+          </button>
+        </div>
+
+        <a href="productos.html" class="linea-mas">Ver más ▼</a>
       </div>
 
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0046.jpg" alt="CUPRA e-RACER / VOITURE DE COURSE">
-        <h3>CUPRA e-RACER / VOITURE DE COURSE</h3>
-        <p class="desc">Nightspeed (5/10)</p>
-        <p class="desc-num">37/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('CUPRA e-RACER / VOITURE DE COURSE 🚗', 20000)">+ Agregar</button>
-      </div>
+      <!-- RESERVACIONES -->
+      <section class="reserv-section" id="reservaciones">
+        <!-- FOTOS COLLAGE -->
+        <div class="reserv-fotos">
+          <img
+            class="reserv-img reserv-img-1"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=699&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Ambiente del restaurante"
+          />
+          <img
+            class="reserv-img reserv-img-2"
+            src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Comida del restaurante"
+          />
+          <img
+            class="reserv-img reserv-img-3"
+            src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Papas fritas"
+          />
+        </div>
 
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0047.jpg" alt="MOD MILL">
-        <h3>MOD MILL</h3>
-        <p class="desc">MUSCLE MANIA FOLIE MUSCLEE (7/10)</p>
-        <p class="desc-num">218/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('MOD MILL 🚗', 20000)">+ Agregar</button>
-      </div>
+        <!-- TEXTO -->
+        <div class="reserv-texto">
+          <h2>Reservaciones</h2>
+          <p class="reserv-sub">¡Asegurá tu mesa y disfrutá sin esperas!</p>
+          <p class="reserv-desc">
+            Nuestro local se llena rápido, así que reservá tu lugar con
+            anticipación. Elegí el día, la hora y vení a disfrutar con amigos de
+            los mejores sabores en un ambiente cómodo y chill.
+          </p>
+          <p class="reserv-espera">¡Te esperamos!</p>
+          <a
+            class="reserv-btn"
+            href="https://wa.me/573159745293?text=Hola!%20Quiero%20hacer%20una%20reservaci%C3%B3n%20%F0%9F%8D%94"
+            target="_blank"
+          >
+            💬 Reservar por WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
 
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0048.jpg" alt="PORSCHE 911 TURBO CABRIOLET">
-        <h3>PORSCHE 911 TURBO CABRIOLET</h3>
-        <p class="desc">DROP TOPS (3/5)</p>
-        <p class="desc-num">52/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('PORSCHE 911 TURBO CABRIOLET 🚗', 20000)">+ Agregar</button>
-      </div>
+    <footer>
+      <p class="footer-main">FXGHotWheels - Bucaramanga CO</p>
+      <p class="footer-sub">
+        Página creada para colección y venta de Hot Wheels
+      </p>
+    </footer>
 
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0049.jpg" alt="24/SEVEN">
-        <h3>24/SEVEN</h3>
-        <p class="desc">NIGHTSPEED (6/10)</p>
-        <p class="desc-num">38/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('24/SEVEN 🚗', 20000)">+ Agregar</button>
+    <!-- MODAL PEDIDO -->
+    <div class="modal-overlay" id="modal-overlay" onclick="cerrarModal()"></div>
+    <div class="modal-pedido" id="modal-pedido">
+      <button class="modal-close" onclick="cerrarModal()">✕</button>
+      <h3>📦 Datos para tu pedido</h3>
+      <p class="modal-sub">Completa tus datos y te contactamos enseguida</p>
+      <div class="modal-campo">
+        <label>Nombre completo</label>
+        <input
+          type="text"
+          id="campo-nombre"
+          placeholder="Ej: Juan Pérez"
+          maxlength="60"
+        />
       </div>
-
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0050.jpg" alt="FERRARI 365 GTB4 COMPETIZIONE">
-        <h3>FERRARI 365 GTB4 COMPETIZIONE</h3>
-        <p class="desc">FERRARI (2/5)</p>
-        <p class="desc-num">62/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('FERRARI 365 GTB4 COMPETIZIONE 🚗', 20000)">+ Agregar</button>
+      <div class="modal-campo">
+        <label>Dirección</label>
+        <input
+          type="text"
+          id="campo-dir"
+          placeholder="Ej: Calle 10 #5-32"
+          maxlength="100"
+        />
       </div>
-
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0051.jpg" alt="FERRARI F40 COMPETIZIONE">
-        <h3>FERRARI F40 COMPETIZIONE</h3>
-        <p class="desc">FERRARI (3/5)</p>
-        <p class="desc-num">63/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('FERRARI F40 COMPETIZIONE 🚗', 20000)">+ Agregar</button>
+      <div class="modal-campo">
+        <label>Barrio / Sector</label>
+        <input
+          type="text"
+          id="campo-barrio"
+          placeholder="Ej: Centro, El Prado..."
+          maxlength="60"
+        />
       </div>
-
-      <div class="producto">
-        <img class="img-producto" src="photo/IMG-20260331-WA0052.jpg" alt="'70 DODGE HEMI CHALLENGER">
-        <h3>'70 DODGE HEMI CHALLENGER</h3>
-        <p class="desc">NIGHTSPEED (4/10)</p>
-        <p class="desc-num">36/250</p>
-        <p class="precio">$20.000</p>
-        <button onclick="agregar('\'70 DODGE HEMI CHALLENGER 🚗', 20000)">+ Agregar</button>
-      </div>
-
-      <a href="productos.html" class="linea-mas">Ver más ▼</a>
-      
+      <button class="modal-btn" onclick="confirmarPedido()">
+        💬 Enviar pedido por WhatsApp
+      </button>
     </div>
 
-    <!-- RESERVACIONES -->
-    <section class="reserv-section" id="reservaciones">
-
-      <!-- FOTOS COLLAGE -->
-      <div class="reserv-fotos">
-        <img class="reserv-img reserv-img-1"
-          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=699&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Ambiente del restaurante">
-        <img class="reserv-img reserv-img-2"
-          src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Comida del restaurante">
-        <img class="reserv-img reserv-img-3"
-          src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=400"
-          alt="Papas fritas">
-      </div>
-
-      <!-- TEXTO -->
-      <div class="reserv-texto">
-        <h2>Reservaciones</h2>
-        <p class="reserv-sub">¡Asegurá tu mesa y disfrutá sin esperas!</p>
-        <p class="reserv-desc">
-          Nuestro local se llena rápido, así que reservá tu lugar con
-          anticipación. Elegí el día, la hora y vení a disfrutar con amigos
-          de los mejores sabores en un ambiente cómodo y chill.
-        </p>
-        <p class="reserv-espera">¡Te esperamos!</p>
-        <a class="reserv-btn"
-          href="https://wa.me/573159745293?text=Hola!%20Quiero%20hacer%20una%20reservaci%C3%B3n%20%F0%9F%8D%94"
-          target="_blank">
-          💬 Reservar por WhatsApp
-        </a>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <p class="footer-main">FXGHotWheels - Bucaramanga CO</p>
-    <p class="footer-sub">Página creada para colección y venta de Hot Wheels</p>
-  </footer>
-
-  <!-- MODAL PEDIDO -->
-  <div class="modal-overlay" id="modal-overlay" onclick="cerrarModal()"></div>
-  <div class="modal-pedido" id="modal-pedido">
-    <button class="modal-close" onclick="cerrarModal()">✕</button>
-    <h3>📦 Datos para tu pedido</h3>
-    <p class="modal-sub">Completa tus datos y te contactamos enseguida</p>
-    <div class="modal-campo">
-      <label>Nombre completo</label>
-      <input type="text" id="campo-nombre" placeholder="Ej: Juan Pérez" maxlength="60">
-    </div>
-    <div class="modal-campo">
-      <label>Dirección</label>
-      <input type="text" id="campo-dir" placeholder="Ej: Calle 10 #5-32" maxlength="100">
-    </div>
-    <div class="modal-campo">
-      <label>Barrio / Sector</label>
-      <input type="text" id="campo-barrio" placeholder="Ej: Centro, El Prado..." maxlength="60">
-    </div>
-    <button class="modal-btn" onclick="confirmarPedido()">💬 Enviar pedido por WhatsApp</button>
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   background: rgb(26, 25, 25);
   min-height: 100vh;
   color: #fff;
@@ -14,18 +14,22 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  background: #2C84C7;
+  background: #2c84c7;
   padding: 22px 40px;
-  box-shadow: 0 4px 20px #4251AE;
+  box-shadow: 0 4px 20px #4251ae;
   position: relative;
   z-index: 100;
 }
 
 header::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.07) 0%, transparent 65%);
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.07) 0%,
+    transparent 65%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -48,7 +52,7 @@ header::before {
 
 .header-logo p {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin-left: 12px;
   font-weight: 500;
 }
@@ -60,18 +64,20 @@ header::before {
 }
 
 .header-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .header-nav a:hover {
   color: #fff;
-  border-bottom-color: rgba(255,255,255,0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 .header-derecha {
@@ -86,8 +92,8 @@ header::before {
 }
 
 .cart-widget-btn {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   width: 44px;
   height: 44px;
@@ -97,11 +103,13 @@ header::before {
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 .cart-widget-btn:hover {
-  background: rgba(255,255,255,0.28);
+  background: rgba(255, 255, 255, 0.28);
   transform: scale(1.08);
 }
 
@@ -109,18 +117,18 @@ header::before {
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #F1D74D;
+  background: #f1d74d;
   color: #1a1a2e;
   font-size: 0.65rem;
   font-weight: 700;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   width: 19px;
   height: 19px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #D42F41;
+  border: 2px solid #d42f41;
 }
 
 /* Dropdown */
@@ -133,7 +141,7 @@ header::before {
   background: #fff;
   color: #222;
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
   z-index: 500;
   overflow: hidden;
   animation: dropDown 0.2s ease;
@@ -144,8 +152,14 @@ header::before {
 }
 
 @keyframes dropDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cart-drop-header {
@@ -174,7 +188,10 @@ header::before {
   transition: background 0.15s;
 }
 
-.cart-drop-close:hover { background: #f0f0f0; color: #333; }
+.cart-drop-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
 
 /* Lista items */
 .cart-drop-lista {
@@ -195,11 +212,15 @@ header::before {
   transition: background 0.15s;
 }
 
-.cart-drop-lista li:last-child { border-bottom: none; }
-.cart-drop-lista li:hover { background: #fafafa; }
+.cart-drop-lista li:last-child {
+  border-bottom: none;
+}
+.cart-drop-lista li:hover {
+  background: #fafafa;
+}
 
 .item-qty {
-  background: #4251AE;
+  background: #4251ae;
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -221,7 +242,7 @@ header::before {
 
 .item-precio {
   font-weight: 700;
-  color: #D42F41;
+  color: #d42f41;
   white-space: nowrap;
 }
 
@@ -233,11 +254,16 @@ header::before {
   font-size: 0.85rem;
   padding: 2px 4px;
   border-radius: 4px;
-  transition: color 0.15s, background 0.15s;
-  font-family: 'Poppins', Arial, sans-serif;
+  transition:
+    color 0.15s,
+    background 0.15s;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
-.item-del:hover { color: #D42F41; background: #fde8ea; }
+.item-del:hover {
+  color: #d42f41;
+  background: #fde8ea;
+}
 
 /* Vacío */
 .cart-drop-vacio {
@@ -248,7 +274,9 @@ header::before {
   font-size: 0.88rem;
 }
 
-.cart-drop-vacio.visible { display: block; }
+.cart-drop-vacio.visible {
+  display: block;
+}
 
 /* Footer dropdown */
 .cart-drop-footer {
@@ -281,11 +309,10 @@ header::before {
   overflow: hidden;
 }
 
-.slides { 
-  width: 100%; 
-  height: 100%; 
-  position: 
-  relative; 
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .slide {
@@ -298,8 +325,9 @@ header::before {
   justify-content: flex-start;
 }
 
-.slide.active { 
-  opacity: 1; z-index: 1; 
+.slide.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 .slide-content {
@@ -309,22 +337,28 @@ header::before {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .slide-content h2 {
   font-size: 2.8rem;
   font-weight: 700;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   margin-bottom: 12px;
   line-height: 1.15;
 }
 
 .slide-content p {
   font-size: 1rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 26px;
   line-height: 1.5;
 }
@@ -344,15 +378,15 @@ main {
 .seccion-titulo h2 {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #F1D74D;
-  border-bottom: 2px solid #D42F41;
+  color: #f1d74d;
+  border-bottom: 2px solid #d42f41;
   display: inline-block;
   padding-bottom: 6px;
 }
 
 .seccion-titulo p {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 10px;
 }
 
@@ -371,17 +405,21 @@ main {
   padding: 22px 18px;
   border-radius: 18px;
   text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   position: relative;
   overflow: hidden;
 }
 
 .producto::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #D42F41, #F1D74D);
+  background: linear-gradient(90deg, #d42f41, #f1d74d);
   border-radius: 18px 18px 0 0;
 }
 
@@ -415,7 +453,7 @@ main {
 
 .desc {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -430,12 +468,12 @@ main {
 .precio {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #F1D74D;
+  color: #f1d74d;
   margin-bottom: 14px;
 }
 
 .producto button {
-  background: linear-gradient(135deg, #D42F41, #a82233);
+  background: linear-gradient(135deg, #d42f41, #a82233);
   color: white;
   padding: 9px 20px;
   border: none;
@@ -443,13 +481,15 @@ main {
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 600;
-  font-family: 'Poppins', Arial, sans-serif;
-  transition: background 0.2s ease, transform 0.15s ease;
+  font-family: "Poppins", Arial, sans-serif;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
   width: 100%;
 }
 
 .producto button:hover {
-  background: linear-gradient(135deg, #e63550, #D42F41);
+  background: linear-gradient(135deg, #e63550, #d42f41);
   transform: scale(1.04);
 }
 
@@ -462,16 +502,18 @@ main {
   display: block;
   margin: 10px auto 0;
   width: fit-content;
-  background: linear-gradient(135deg, #D42F41, #a82233);
+  background: linear-gradient(135deg, #d42f41, #a82233);
   color: #fff;
   text-decoration: none;
   padding: 13px 40px;
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 700;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   box-shadow: 0 4px 18px rgba(212, 47, 65, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .linea-mas:hover {
@@ -507,7 +549,7 @@ main {
 }
 
 #contador-badge {
-  background: #D42F41;
+  background: #d42f41;
   color: white;
   font-size: 0.8rem;
   font-weight: 700;
@@ -533,7 +575,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   padding: 10px 14px;
   font-size: 0.9rem;
@@ -541,20 +583,26 @@ main {
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-10px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #lista li button {
   background: rgba(212, 47, 65, 0.2);
-  color: #D42F41;
+  color: #d42f41;
   border: 1px solid rgba(212, 47, 65, 0.4);
   border-radius: 8px;
   padding: 4px 8px;
   cursor: pointer;
   font-size: 0.8rem;
   transition: background 0.2s;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 #lista li button:hover {
@@ -565,7 +613,7 @@ main {
 .carrito-vacio {
   text-align: center;
   padding: 15px 0;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 0.9rem;
   display: none;
 }
@@ -576,7 +624,7 @@ main {
 
 /* Footer del carrito */
 .carrito-footer {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 18px;
   display: flex;
   align-items: center;
@@ -588,7 +636,7 @@ main {
 #total {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #F1D74D;
+  color: #f1d74d;
 }
 
 .btn-whatsapp {
@@ -600,11 +648,13 @@ main {
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 600;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
 }
 
@@ -626,7 +676,7 @@ main {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #D42F41, #a82233);
+  background: linear-gradient(135deg, #d42f41, #a82233);
   color: #fff;
   font-size: 1.6rem;
   border: none;
@@ -635,7 +685,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .fab-carrito:hover {
@@ -651,7 +703,7 @@ main {
   position: absolute;
   top: -4px;
   right: -4px;
-  background: #F1D74D;
+  background: #f1d74d;
   color: #1a1a2e;
   font-size: 0.7rem;
   font-weight: 700;
@@ -661,28 +713,28 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #4251AE;
-  font-family: 'Poppins', Arial, sans-serif;
+  border: 2px solid #4251ae;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 20px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255, 255, 255, 0.35);
   font-size: 0.82rem;
 }
 
 .footer-main {
   font-size: 1rem;
   font-weight: 600;
-  color: #F1D74D;
+  color: #f1d74d;
   margin-bottom: 8px;
 }
 
 .footer-sub {
-  font-size: 0.80rem;
-  color: rgba(255,255,255,0.35);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* ===== MODAL PEDIDO ===== */
@@ -690,12 +742,14 @@ footer {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 600;
   backdrop-filter: blur(3px);
 }
 
-.modal-overlay.visible { display: block; }
+.modal-overlay.visible {
+  display: block;
+}
 
 .modal-pedido {
   display: none;
@@ -710,15 +764,23 @@ footer {
   width: 90%;
   max-width: 420px;
   z-index: 700;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   animation: modalIn 0.25s ease;
 }
 
-.modal-pedido.visible { display: block; }
+.modal-pedido.visible {
+  display: block;
+}
 
 @keyframes modalIn {
-  from { opacity: 0; transform: translate(-50%, -46%); }
-  to   { opacity: 1; transform: translate(-50%, -50%); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .modal-close {
@@ -735,7 +797,10 @@ footer {
   transition: background 0.15s;
 }
 
-.modal-close:hover { background: #f0f0f0; color: #333; }
+.modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
 
 .modal-pedido h3 {
   font-size: 1.2rem;
@@ -768,13 +833,15 @@ footer {
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 0.9rem;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   color: #1a1a2e;
   outline: none;
   transition: border-color 0.2s;
 }
 
-.modal-campo input:focus { border-color: #D42F41; }
+.modal-campo input:focus {
+  border-color: #d42f41;
+}
 
 .modal-btn {
   width: 100%;
@@ -785,19 +852,19 @@ footer {
   padding: 13px;
   font-size: 0.95rem;
   font-weight: 700;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   cursor: pointer;
   margin-top: 6px;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .modal-btn:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 22px rgba(37,211,102,0.55);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55);
 }
-
-
 
 /* ===== RESERVACIONES ===== */
 .reserv-section {
@@ -805,8 +872,8 @@ footer {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-top: 60px;
-  border-top: 4px solid #D42F41;
-  border-bottom: 4px solid #D42F41;
+  border-top: 4px solid #d42f41;
+  border-bottom: 4px solid #d42f41;
 
   overflow: hidden;
   width: calc(100% + 40px);
@@ -824,24 +891,30 @@ footer {
   position: absolute;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 .reserv-img-1 {
-  width: 55%; height: 75%;
-  top: 10%; left: 5%;
+  width: 55%;
+  height: 75%;
+  top: 10%;
+  left: 5%;
   z-index: 2;
 }
 
 .reserv-img-2 {
-  width: 42%; height: 45%;
-  top: 5%; right: 5%;
+  width: 42%;
+  height: 45%;
+  top: 5%;
+  right: 5%;
   z-index: 3;
 }
 
 .reserv-img-3 {
-  width: 42%; height: 45%;
-  bottom: 5%; right: 5%;
+  width: 42%;
+  height: 45%;
+  bottom: 5%;
+  right: 5%;
   z-index: 3;
 }
 
@@ -851,7 +924,7 @@ footer {
 }
 
 .reserv-texto h2 {
-  font-family: 'Dancing Script', cursive, sans-serif;
+  font-family: "Dancing Script", cursive, sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
@@ -884,20 +957,22 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #4251AE, #2C84C7);
+  background: linear-gradient(135deg, #4251ae, #2c84c7);
   color: #fff;
   text-decoration: none;
   padding: 13px 28px;
   border-radius: 30px;
   font-size: 0.92rem;
   font-weight: 700;
-  font-family: 'Poppins', Arial, sans-serif;
-  transition: background 0.2s ease, transform 0.2s ease;
+  font-family: "Poppins", Arial, sans-serif;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
   box-shadow: 0 4px 16px rgba(66, 81, 174, 0.4);
 }
 
 .reserv-btn:hover {
-  background: linear-gradient(135deg, #2C84C7, #4251AE);
+  background: linear-gradient(135deg, #2c84c7, #4251ae);
   transform: scale(1.04);
 }
 

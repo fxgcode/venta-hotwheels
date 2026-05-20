@@ -1,257 +1,337 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos — HotWheels</title>
-  <link rel="stylesheet" href="productos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="header-content">
-      <a class="btn-volver" href="index.html">← Volver</a>
-      <div class="header-logo">
-        <h1>Hot Wheels</h1>
-        <p class="subtitulo">Nuestros Productos</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos — HotWheels</title>
+    <link rel="stylesheet" href="productos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <a class="btn-volver" href="index.html">← Volver</a>
+        <div class="header-logo">
+          <h1>Hot Wheels</h1>
+          <p class="subtitulo">Nuestros Productos</p>
+        </div>
+        <div style="width: 90px"></div>
       </div>
-      <div style="width:90px"></div>
+    </header>
+
+    <main>
+      <!-- CATEGORÍA: HAMBURGUESAS -->
+      <section class="categoria">
+        <h2 class="cat-titulo">Hot Wheels</h2>
+        <div class="menu-grid">
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="photo/IMG-20260331-WA0038.jpg"
+              alt="Lamborgnini Huuracán Sterrato"
+            />
+            <div class="producto-info">
+              <h3>Lamborgnini Huuracán Sterrato</h3>
+              <p class="desc">Safari Mode (1/5)</p>
+              <p class="desc-num">41/250</p>
+              <div class="producto-footer">
+                <span class="precio">$20.000</span>
+                <button
+                  onclick="agregar('Lamborgnini Huuracán Sterrato', 20000)"
+                >
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="photo/IMG-20260331-WA0046.jpg"
+              alt="CUPRA e-RACER / VOITURE DE COURSE"
+            />
+            <div class="producto-info">
+              <h3>CUPRA e-RACER / VOITURE DE COURSE</h3>
+              <p class="desc">Nightspeed (5/10)</p>
+              <p class="desc-num">37/250</p>
+              <div class="producto-footer">
+                <span class="precio">$20.000</span>
+                <button
+                  onclick="agregar('CUPRA e-RACER / VOITURE DE COURSE', 20000)"
+                >
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="photo/IMG-20260331-WA0047.jpg"
+              alt="MOD MILL"
+            />
+            <div class="producto-info">
+              <h3>MOD MILL</h3>
+              <p class="desc">MUSCLE MANIA FOLIE MUSCLEE (7/10)</p>
+              <p class="desc-num">218/250</p>
+              <div class="producto-footer">
+                <span class="precio">$20.000</span>
+                <button onclick="agregar('MOD MILL', 20000)">+ Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="photo/IMG-20260331-WA0048.jpg"
+              alt="PORSCHE 911 TURBO CABRIOLET"
+            />
+            <div class="producto-info">
+              <h3>PORSCHE 911 TURBO CABRIOLET</h3>
+              <p class="desc">DROP TOPS (3/5)</p>
+              <p class="desc-num">52/250</p>
+              <div class="producto-footer">
+                <span class="precio">$20.000</span>
+                <button onclick="agregar('PORSCHE 911 TURBO CABRIOLET', 20000)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORÍA: PIZZAS -->
+      <section class="categoria">
+        <h2 class="cat-titulo">🍕 Pizzas</h2>
+        <div class="menu-grid">
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80&auto=format&fit=crop"
+              alt="Pizza Personal"
+            />
+            <div class="producto-info">
+              <h3>Pizza Personal</h3>
+              <p class="desc">Masa crocante con queso mozzarella</p>
+              <div class="producto-footer">
+                <span class="precio">$12.000</span>
+                <button onclick="agregar('Pizza Personal', 12000)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://www.sortirambnens.com/wp-content/uploads/2019/02/pizza-de-peperoni.jpg"
+              alt="Pizza Pepperoni"
+            />
+            <div class="producto-info">
+              <h3>Pizza Pepperoni</h3>
+              <p class="desc">Deliciosa pizza con pepperoni y queso fundido</p>
+              <div class="producto-footer">
+                <span class="precio">$15.000</span>
+                <button onclick="agregar('Pizza Pepperoni', 15000)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80&auto=format&fit=crop"
+              alt="Pizza Familiar"
+            />
+            <div class="producto-info">
+              <h3>Pizza Familiar</h3>
+              <p class="desc">
+                Grande, para compartir, 4 ingredientes a elección
+              </p>
+              <div class="producto-footer">
+                <span class="precio">$28.000</span>
+                <button onclick="agregar('Pizza Familiar', 28000)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORÍA: ACOMPAÑAMIENTOS -->
+      <section class="categoria">
+        <h2 class="cat-titulo">🍟 Acompañamientos</h2>
+        <div class="menu-grid">
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80&auto=format&fit=crop"
+              alt="Papas Fritas"
+            />
+            <div class="producto-info">
+              <h3>Papas Fritas</h3>
+              <p class="desc">Crujientes y doradas, con salsa a elección</p>
+              <div class="producto-footer">
+                <span class="precio">$5.000</span>
+                <button onclick="agregar('Papas Fritas', 5000)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.pexels.com/photos/4728274/pexels-photo-4728274.jpeg"
+              alt="Hot Dog"
+            />
+            <div class="producto-info">
+              <h3>Hot Dog</h3>
+              <p class="desc">Salchicha con mostaza y salsas especiales</p>
+              <div class="producto-footer">
+                <span class="precio">$7.000</span>
+                <button onclick="agregar('Hot Dog', 7000)">+ Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORÍA: BEBIDAS Y POSTRES -->
+      <section class="categoria">
+        <h2 class="cat-titulo">🥤 Bebidas & Postres</h2>
+        <div class="menu-grid">
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.unsplash.com/photo-1543253687-c931c8e01820?w=400&q=80&auto=format&fit=crop"
+              alt="Gaseosa"
+            />
+            <div class="producto-info">
+              <h3>Gaseosa</h3>
+              <p class="desc">Bebida fría bien helada</p>
+              <div class="producto-footer">
+                <span class="precio">$4.000</span>
+                <button onclick="agregar('Gaseosa', 4000)">+ Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=80&auto=format&fit=crop"
+              alt="Jugo Natural"
+            />
+            <div class="producto-info">
+              <h3>Jugo Natural</h3>
+              <p class="desc">Frutas frescas del día, sin azúcar añadida</p>
+              <div class="producto-footer">
+                <span class="precio">$5.500</span>
+                <button onclick="agregar('Jugo Natural', 5500)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto">
+            <img
+              class="img-producto"
+              src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80&auto=format&fit=crop"
+              alt="Helado"
+            />
+            <div class="producto-info">
+              <h3>Helado</h3>
+              <p class="desc">Postre cremoso de vainilla o chocolate</p>
+              <div class="producto-footer">
+                <span class="precio">$3.500</span>
+                <button onclick="agregar('Helado', 3500)">+ Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- CARRITO FLOTANTE -->
+    <div class="fab-wrap" id="fab-wrap" style="display: none">
+      <button class="fab-carrito" onclick="toggleCarrito()">
+        🛒 <span class="fab-badge" id="fab-badge">0</span>
+      </button>
     </div>
-  </header>
 
-  <main>
-
-    <!-- CATEGORÍA: HAMBURGUESAS -->
-    <section class="categoria">
-      <h2 class="cat-titulo">Hot Wheels</h2>
-      <div class="menu-grid">
-
-        <div class="producto">
-          <img class="img-producto" src="photo/IMG-20260331-WA0038.jpg" alt="Lamborgnini Huuracán Sterrato">
-          <div class="producto-info">
-            <h3>Lamborgnini Huuracán Sterrato</h3>
-            <p class="desc">Safari Mode (1/5)</p>
-            <p class="desc-num">41/250</p>
-            <div class="producto-footer">
-              <span class="precio">$20.000</span>
-              <button onclick="agregar('Lamborgnini Huuracán Sterrato', 20000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="photo/IMG-20260331-WA0046.jpg" alt="CUPRA e-RACER / VOITURE DE COURSE">
-          <div class="producto-info">
-            <h3>CUPRA e-RACER / VOITURE DE COURSE</h3>
-            <p class="desc">Nightspeed (5/10)</p>
-            <p class="desc-num">37/250</p>
-            <div class="producto-footer">
-              <span class="precio">$20.000</span>
-              <button onclick="agregar('CUPRA e-RACER / VOITURE DE COURSE', 20000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="photo/IMG-20260331-WA0047.jpg" alt="MOD MILL">
-          <div class="producto-info">
-            <h3>MOD MILL</h3>
-            <p class="desc">MUSCLE MANIA FOLIE MUSCLEE (7/10)</p>
-            <p class="desc-num">218/250</p>
-            <div class="producto-footer">
-              <span class="precio">$20.000</span>
-              <button onclick="agregar('MOD MILL', 20000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="photo/IMG-20260331-WA0048.jpg" alt="PORSCHE 911 TURBO CABRIOLET">
-          <div class="producto-info">
-            <h3>PORSCHE 911 TURBO CABRIOLET</h3>
-            <p class="desc">DROP TOPS (3/5)</p>
-            <p class="desc-num">52/250</p>
-            <div class="producto-footer">
-              <span class="precio">$20.000</span>
-              <button onclick="agregar('PORSCHE 911 TURBO CABRIOLET', 20000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
+    <!-- PANEL CARRITO -->
+    <div class="carrito-panel" id="carrito-panel">
+      <div class="carrito-panel-header">
+        <h3>Tu pedido</h3>
+        <button onclick="toggleCarrito()">✕</button>
       </div>
-    </section>
-
-    <!-- CATEGORÍA: PIZZAS -->
-    <section class="categoria">
-      <h2 class="cat-titulo">🍕 Pizzas</h2>
-      <div class="menu-grid">
-
-        <div class="producto">
-          <img class="img-producto" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80&auto=format&fit=crop" alt="Pizza Personal">
-          <div class="producto-info">
-            <h3>Pizza Personal</h3>
-            <p class="desc">Masa crocante con queso mozzarella</p>
-            <div class="producto-footer">
-              <span class="precio">$12.000</span>
-              <button onclick="agregar('Pizza Personal', 12000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="https://www.sortirambnens.com/wp-content/uploads/2019/02/pizza-de-peperoni.jpg" alt="Pizza Pepperoni">
-          <div class="producto-info">
-            <h3>Pizza Pepperoni</h3>
-            <p class="desc">Deliciosa pizza con pepperoni y queso fundido</p>
-            <div class="producto-footer">
-              <span class="precio">$15.000</span>
-              <button onclick="agregar('Pizza Pepperoni', 15000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80&auto=format&fit=crop" alt="Pizza Familiar">
-          <div class="producto-info">
-            <h3>Pizza Familiar</h3>
-            <p class="desc">Grande, para compartir, 4 ingredientes a elección</p>
-            <div class="producto-footer">
-              <span class="precio">$28.000</span>
-              <button onclick="agregar('Pizza Familiar', 28000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
+      <ul id="lista-carrito"></ul>
+      <p class="carrito-vacio" id="carrito-vacio">😕 Carrito vacío</p>
+      <div class="carrito-panel-footer">
+        <p id="total-carrito">Total: $0</p>
+        <button class="btn-whatsapp" onclick="enviarPedidoMenu()">
+          💬 Pedir por WhatsApp
+        </button>
       </div>
-    </section>
+    </div>
 
-    <!-- CATEGORÍA: ACOMPAÑAMIENTOS -->
-    <section class="categoria">
-      <h2 class="cat-titulo">🍟 Acompañamientos</h2>
-      <div class="menu-grid">
+    <footer>
+      <p>© 2026 Restaurante FXGCode · Hecho con ❤️</p>
+    </footer>
 
-        <div class="producto">
-          <img class="img-producto" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80&auto=format&fit=crop" alt="Papas Fritas">
-          <div class="producto-info">
-            <h3>Papas Fritas</h3>
-            <p class="desc">Crujientes y doradas, con salsa a elección</p>
-            <div class="producto-footer">
-              <span class="precio">$5.000</span>
-              <button onclick="agregar('Papas Fritas', 5000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="https://images.pexels.com/photos/4728274/pexels-photo-4728274.jpeg" alt="Hot Dog">
-          <div class="producto-info">
-            <h3>Hot Dog</h3>
-            <p class="desc">Salchicha con mostaza y salsas especiales</p>
-            <div class="producto-footer">
-              <span class="precio">$7.000</span>
-              <button onclick="agregar('Hot Dog', 7000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
+    <!-- MODAL PEDIDO -->
+    <div class="modal-overlay" id="modal-overlay" onclick="cerrarModal()"></div>
+    <div class="modal-pedido" id="modal-pedido">
+      <button class="modal-close" onclick="cerrarModal()">✕</button>
+      <h3>📦 Datos para tu pedido</h3>
+      <p class="modal-sub">Completa tus datos y te contactamos enseguida</p>
+      <div class="modal-campo">
+        <label>Nombre completo</label>
+        <input
+          type="text"
+          id="campo-nombre"
+          placeholder="Ej: Juan Pérez"
+          maxlength="60"
+        />
       </div>
-    </section>
-
-    <!-- CATEGORÍA: BEBIDAS Y POSTRES -->
-    <section class="categoria">
-      <h2 class="cat-titulo">🥤 Bebidas & Postres</h2>
-      <div class="menu-grid">
-
-        <div class="producto">
-          <img class="img-producto" src="https://images.unsplash.com/photo-1543253687-c931c8e01820?w=400&q=80&auto=format&fit=crop" alt="Gaseosa">
-          <div class="producto-info">
-            <h3>Gaseosa</h3>
-            <p class="desc">Bebida fría bien helada</p>
-            <div class="producto-footer">
-              <span class="precio">$4.000</span>
-              <button onclick="agregar('Gaseosa', 4000)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=80&auto=format&fit=crop" alt="Jugo Natural">
-          <div class="producto-info">
-            <h3>Jugo Natural</h3>
-            <p class="desc">Frutas frescas del día, sin azúcar añadida</p>
-            <div class="producto-footer">
-              <span class="precio">$5.500</span>
-              <button onclick="agregar('Jugo Natural', 5500)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img class="img-producto" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80&auto=format&fit=crop" alt="Helado">
-          <div class="producto-info">
-            <h3>Helado</h3>
-            <p class="desc">Postre cremoso de vainilla o chocolate</p>
-            <div class="producto-footer">
-              <span class="precio">$3.500</span>
-              <button onclick="agregar('Helado', 3500)">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
+      <div class="modal-campo">
+        <label>Dirección</label>
+        <input
+          type="text"
+          id="campo-dir"
+          placeholder="Ej: Calle 10 #5-32"
+          maxlength="100"
+        />
       </div>
-    </section>
-
-  </main>
-
-  <!-- CARRITO FLOTANTE -->
-  <div class="fab-wrap" id="fab-wrap" style="display:none">
-    <button class="fab-carrito" onclick="toggleCarrito()">
-      🛒 <span class="fab-badge" id="fab-badge">0</span>
-    </button>
-  </div>
-
-  <!-- PANEL CARRITO -->
-  <div class="carrito-panel" id="carrito-panel">
-    <div class="carrito-panel-header">
-      <h3>Tu pedido</h3>
-      <button onclick="toggleCarrito()">✕</button>
+      <div class="modal-campo">
+        <label>Barrio / Sector</label>
+        <input
+          type="text"
+          id="campo-barrio"
+          placeholder="Ej: Centro, El Prado..."
+          maxlength="60"
+        />
+      </div>
+      <button class="modal-btn" onclick="confirmarPedido()">
+        💬 Enviar pedido por WhatsApp
+      </button>
     </div>
-    <ul id="lista-carrito"></ul>
-    <p class="carrito-vacio" id="carrito-vacio">😕 Carrito vacío</p>
-    <div class="carrito-panel-footer">
-      <p id="total-carrito">Total: $0</p>
-      <button class="btn-whatsapp" onclick="enviarPedidoMenu()">💬 Pedir por WhatsApp</button>
-    </div>
-  </div>
 
-  <footer>
-    <p>© 2026 Restaurante FXGCode · Hecho con ❤️</p>
-  </footer>
-
-  <!-- MODAL PEDIDO -->
-  <div class="modal-overlay" id="modal-overlay" onclick="cerrarModal()"></div>
-  <div class="modal-pedido" id="modal-pedido">
-    <button class="modal-close" onclick="cerrarModal()">✕</button>
-    <h3>📦 Datos para tu pedido</h3>
-    <p class="modal-sub">Completa tus datos y te contactamos enseguida</p>
-    <div class="modal-campo">
-      <label>Nombre completo</label>
-      <input type="text" id="campo-nombre" placeholder="Ej: Juan Pérez" maxlength="60">
-    </div>
-    <div class="modal-campo">
-      <label>Dirección</label>
-      <input type="text" id="campo-dir" placeholder="Ej: Calle 10 #5-32" maxlength="100">
-    </div>
-    <div class="modal-campo">
-      <label>Barrio / Sector</label>
-      <input type="text" id="campo-barrio" placeholder="Ej: Centro, El Prado..." maxlength="60">
-    </div>
-    <button class="modal-btn" onclick="confirmarPedido()">💬 Enviar pedido por WhatsApp</button>
-  </div>
-
-  <script src="productos.js"></script>
-
-</body>
+    <script src="productos.js"></script>
+  </body>
 </html>
