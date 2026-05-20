@@ -10,9 +10,9 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(135deg, #e63946, #c1121f);
+  background: #2C84C7;
   padding: 18px 40px;
-  box-shadow: 0 4px 20px rgba(230,57,70,0.4);
+  box-shadow: #4251AE;
   position: sticky;
   top: 0;
   z-index: 100;
