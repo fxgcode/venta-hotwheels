@@ -957,7 +957,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #4251ae, #2c84c7);
+  background: #25D366;
   color: #fff;
   text-decoration: none;
   padding: 13px 28px;
@@ -968,11 +968,10 @@ footer {
   transition:
     background 0.2s ease,
     transform 0.2s ease;
-  box-shadow: 0 4px 16px rgba(66, 81, 174, 0.4);
 }
 
 .reserv-btn:hover {
-  background: linear-gradient(135deg, #2c84c7, #4251ae);
+  background: #1ebc5a;
   transform: scale(1.04);
 }
 
