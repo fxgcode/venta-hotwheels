@@ -309,25 +309,27 @@ header::before {
   overflow: hidden;
 }
 
-.slides {
+.hero-video-wrap {
+  position: absolute;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.hero-video {
   width: 100%;
   height: 100%;
-  position: relative;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
 }
 
-.slide {
+.hero-video-overlay {
   position: absolute;
   inset: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 1;
 }
 
 .slide-content {
