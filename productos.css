@@ -148,6 +148,12 @@ main {
   margin-bottom: 14px;
 }
 
+.desc-a {
+  color: white;
+  font-size: 0.72rem;
+  margin-bottom: 14px;
+}
+
 .producto-footer {
   display: flex;
   align-items: center;
